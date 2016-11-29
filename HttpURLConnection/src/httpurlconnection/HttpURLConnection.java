@@ -54,7 +54,7 @@ public class HttpURLConnection {
     }
     
     public void sendPost() throws Exception{
-        String url = "http://requestb.in/18qy8ye1";
+        String url = "yoururl";
         URL obj = new URL(url);
         java.net.HttpURLConnection con = (java.net.HttpURLConnection) obj.openConnection();        
         //default is GET, for POST you have to specify it
@@ -69,7 +69,6 @@ public class HttpURLConnection {
         DataOutputStream wr = new DataOutputStream(con.getOutputStream());
         wr.writeBytes(urlParameters);
         
-        //TODO: Fix ERROR responseCode = 403
         int responseCode = con.getResponseCode();
         System.out.println("Sending Post request to URL: "+url);
         System.out.println("Post parameters: "+urlParameters);
